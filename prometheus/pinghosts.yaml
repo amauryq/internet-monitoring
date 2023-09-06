@@ -3,5 +3,4 @@
     - https://github.com;github.com;external;x5
     - http://10.0.0.1;x5;local;deco
     - http://192.168.0.1;deco;local;deco
-    - https://wheeljack.maliam.local;deco;local;deco
-
+    - https://192.168.0.10;wheeljack;local;deco

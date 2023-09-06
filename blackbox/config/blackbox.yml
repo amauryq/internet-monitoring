@@ -3,6 +3,10 @@ modules:
     prober: http
     http:
       preferred_ip_protocol: "ip4"
+      valid_status_codes: [200]
+      method: HEAD
+      no_follow_redirects: false
+      insecure: true
   http_post_2xx:
     prober: http
     http:
