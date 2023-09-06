@@ -29,7 +29,7 @@
         "#d44a3a"
       ],
       "datasource": "prometheus",
-      "format": "none",
+      "format": "MB",
       "gauge": {
         "maxValue": 50,
         "minValue": 0,
@@ -80,7 +80,7 @@
       "tableColumn": "",
       "targets": [
         {
-          "expr": "speedtest_bits_per_second{direction=\"downstream\"}",
+          "expr": "speedtest_download_bits_per_second/1000000",
           "format": "time_series",
           "intervalFactor": 1,
           "refId": "A"
@@ -109,7 +109,7 @@
         "#d44a3a"
       ],
       "datasource": "prometheus",
-      "format": "none",
+      "format": "MB",
       "gauge": {
         "maxValue": 20,
         "minValue": 0,
@@ -160,7 +160,7 @@
       "tableColumn": "",
       "targets": [
         {
-          "expr": "speedtest_bits_per_second{direction=\"upstream\"}",
+          "expr": "speedtest_upload_bits_per_second/1000000",
           "format": "time_series",
           "intervalFactor": 1,
           "refId": "A"
@@ -241,7 +241,7 @@
       "tableColumn": "",
       "targets": [
         {
-          "expr": "speedtest_ping",
+          "expr": "speedtest_ping_latency_milliseconds",
           "format": "time_series",
           "intervalFactor": 1,
           "refId": "A"
@@ -299,12 +299,20 @@
       "steppedLine": false,
       "targets": [
         {
-          "expr": "speedtest_bits_per_second{}",
+          "expr": "speedtest_download_bits_per_second",
           "format": "time_series",
           "intervalFactor": 1,
-          "legendFormat": "{{direction}}",
-          "refId": "A"
+          "legendFormat": "download",
+          "refId": "D"
+        },
+        {
+          "expr": "speedtest_upload_bits_per_second",
+          "format": "time_series",
+          "intervalFactor": 1,
+          "legendFormat": "upload",
+          "refId": "U"
         }
+
       ],
       "thresholds": [],
       "timeFrom": null,
