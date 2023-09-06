@@ -1,8 +1,8 @@
 - targets:  # url;humanname;routing;switch
-    - http://google.com;google.com;external;internetbox
-    - http://github.com;github.com;external;internetbox
-    - https://blackdata.xam.dk:5001;blackdata.xam.dk;external;internetbox
-    - http://192.168.1.1;internetbox;local;internetbox
-    - http://192.168.1.42;blackdata;local;orbirouter-attic
-    - http://192.168.1.101;orbirouter;local;orbirouter
+    - http://google.com;google.com;external;x5
+    - http://github.com;github.com;external;x5
+    - http://10.0.0.1;x5;local;deco
+    - http://192.168.0.1;deco;local;deco
+    - http://wheeljack.maliam.local;wheeljack;local;deco
+    - http://bumblebee.maliam.local;bumblebee;local;deco
 
