@@ -3,6 +3,5 @@
     - http://github.com;github.com;external;x5
     - http://10.0.0.1;x5;local;deco
     - http://192.168.0.1;deco;local;deco
-    - http://wheeljack.maliam.local;wheeljack;local;deco
-    - http://bumblebee.maliam.local;bumblebee;local;deco
-
+    - http://192.168.0.10;wheeljack;local;deco
+    - http://192.168.1.2;bumblebee;local;deco
