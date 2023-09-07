@@ -1,6 +1,5 @@
 - targets:  # url;humanname;routing;switch
-    - https://google.com;google.com;external;x5
-    - https://github.com;github.com;external;x5
+    - https://cribl.io;cribl;external;x5
     - http://10.0.0.1;x5;local;deco
     - http://192.168.0.1;deco;local;deco
     - https://192.168.0.10;wheeljack;local;deco
