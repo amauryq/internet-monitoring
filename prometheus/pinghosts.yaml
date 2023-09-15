@@ -3,3 +3,10 @@
     - http://10.0.0.1;x5;local;deco
     - http://192.168.0.1;deco;local;deco
     - https://192.168.0.10;wheeljack;local;deco
+    - https://terramarbrands.com;terramar;external;x5
+    # - https://www.terramarbrands.com;terramarbrands;external;internet
+    # - https://terramarbrands.mx;terramarbrands-mx;external;internet
+    # - https://api.terramarbrandsusa.com;api-terramarbrandsusa;external;internet
+    # - https://192.168.10.100;serv-mx;local;openvpn
+    # - https://192.168.10.90;serv-usa;local;openvpn
+    # - https://192.168.10.240;as400;local;openvpn
