@@ -24,6 +24,7 @@ services:
     links:
       - ping:ping
       - speedtest:speedtest
+    restart: unless-stopped
     networks:
       - back-tier
 
@@ -38,6 +39,7 @@ services:
       - 3030:3000
     env_file:
       - ./grafana/config.monitoring
+    restart: unless-stopped
     networks:
       - back-tier
       - front-tier
@@ -54,6 +56,7 @@ services:
       - ./blackbox/config:/config
     command:
       - '--config.file=/config/blackbox.yml'
+    restart: unless-stopped
     networks:
       - back-tier
 
@@ -90,12 +93,11 @@ services:
       - /:/rootfs:ro
     ports:
       - 9100:9100
-    restart: always
     command:
       - '--path.procfs=/host/proc'
       - '--path.sysfs=/host/sys'
       - --collector.filesystem.ignored-mount-points
       - "^/(sys|proc|dev|host|etc|rootfs/var/lib/docker/containers|rootfs/var/lib/docker/overlay2|rootfs/run/docker/netns|rootfs/var/lib/docker/aufs)($$|/)"
+    restart: unless-stopped
     networks:
       - back-tier
-
